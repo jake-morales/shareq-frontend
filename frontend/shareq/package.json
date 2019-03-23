@@ -1,0 +1,28 @@
+{
+  "name": "shareq",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel index.html",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@material-ui/core": "^3.9.2",
+    "@material-ui/icons": "^3.0.2",
+    "query-string": "^6.4.0",
+    "react": "^16.8.4",
+    "react-autosuggest": "^9.4.3",
+    "react-dom": "^16.8.4",
+    "react-router-dom": "^4.3.1",
+    "react-websocket": "^2.0.1",
+    "typeface-roboto": "0.0.54"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.10.3",
+    "ws": "3.3.2"
+  }
+}
