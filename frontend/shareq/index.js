@@ -12,7 +12,7 @@ import 'typeface-roboto'
 //import { Typography } from '@material-ui/core';
 
 export const constants = {
-  backendIP: 'localhost:8000' // localhost:8000 or 192.168.1.8:8000
+  backendIP: 'shareq.herokuapp.com' // localhost:8000 or 192.168.1.8:8000
 } 
 
 const Index = (
