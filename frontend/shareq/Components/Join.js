@@ -19,7 +19,7 @@ function Join (props) {
     }
 
     const handleJoin = () => {
-        fetch(`http://${constants.backendIP}/api/exists/${input}/` )
+        fetch(`https://${constants.backendIP}/api/exists/${input}/` )
             .then(response =>{
                 console.log(response.status)
                 if (response.status === 200){

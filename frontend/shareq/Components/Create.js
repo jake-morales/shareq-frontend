@@ -73,7 +73,7 @@ function Create (props) {
                     </Grid>
                     <Grid item
                         >
-                        <a href={`https://accounts.spotify.com/authorize/?client_id=3eb8dfeedca3482e81ad40e56173d50b&response_type=code&redirect_uri=http%3A%2F%2F${encode(constants.backendIP)}%2Fapi%2Fcallback%2F&scope=user-modify-playback-state%20user-read-private&state=${queue}`}> 
+                        <a href={`https://accounts.spotify.com/authorize/?client_id=3eb8dfeedca3482e81ad40e56173d50b&response_type=code&redirect_uri=https%3A%2F%2F${encode(constants.backendIP)}%2Fapi%2Fcallback%2F&scope=user-modify-playback-state%20user-read-private&state=${queue}`}> 
                             <Button variant="contained" color="primary" size="large">
                                 <SendIcon /> 
                             </Button>

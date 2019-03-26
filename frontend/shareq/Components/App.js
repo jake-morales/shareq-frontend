@@ -45,7 +45,7 @@ function App (props) {
 
   useEffect(()=>{
 
-    fetch(`http://localhost:8000/api/exists/${props.match.params.id}/` )
+    fetch(`https://shareq.herokuapp.com/api/exists/${props.match.params.id}/` )
             .then(response =>{
                 console.log(response.status)
                 if (response.status !== 200){
@@ -70,7 +70,7 @@ function App (props) {
   }, [])
 
   useEffect(()=>{
-    fetch(`http://localhost:8000/api/admin/${props.match.params.id}/`,{credentials: 'include'})
+    fetch(`https://shareq.herokuapp.com/api/admin/${props.match.params.id}/`,{credentials: 'include'})
       .then(res=>res.text())
       .then( (data) => {
         console.log(data)
@@ -103,7 +103,7 @@ function App (props) {
   };
 
   const playNext = () => {
-    fetch(`http://localhost:8000/api/next/${props.match.params.id}`, {credentials:'include'})
+    fetch(`https://shareq.herokuapp.com/api/next/${props.match.params.id}`, {credentials:'include'})
       .then(res=>res.text())
       .then(data=>console.log(data))
       .catch(err=>console.log(err))
