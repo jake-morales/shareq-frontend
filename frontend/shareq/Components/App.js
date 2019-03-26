@@ -12,7 +12,7 @@ import Typography from '@material-ui/core/Typography'
 import {IconButton, Avatar, Fab} from '@material-ui/core/'
 import SkipNextIcon from '@material-ui/icons/SkipNext'
 
-const ws = new WebSocket(`ws://shareq.herokuapp.com/ws/queue/`)
+const ws = new WebSocket(`wss://shareq.herokuapp.com/ws/queue/`)
 
 function App (props) {
 
