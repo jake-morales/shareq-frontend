@@ -45,7 +45,7 @@ function App (props) {
 
   useEffect(()=>{
 
-    fetch(`https://shareq.herokuapp.com/api/exists/${props.match.params.id}/`, {mode:'cors'} )
+    fetch(`https://shareq.herokuapp.com/api/exists/${props.match.params.id}/` )
             .then(response =>{
                 console.log(response.status)
                 if (response.status !== 200){
