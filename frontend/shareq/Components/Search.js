@@ -11,7 +11,7 @@ const Search = (props) => {
     const [token, setToken] = useState('')
 
     useEffect(() =>{
-        fetch(`http://${constants.backendIP}/api/token/`)
+        fetch(`https://${constants.backendIP}/api/token/`)
             .then(res => res.json())
             .then(data => setToken(data.token))
             .catch(err => console.log(err))
