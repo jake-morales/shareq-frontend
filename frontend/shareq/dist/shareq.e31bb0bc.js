@@ -75824,7 +75824,7 @@ function _iterableToArrayLimit(arr, i) { var _arr = []; var _n = true; var _d = 
 
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
-var ws = new WebSocket("ws://localhost:8000/ws/queue/");
+var ws = new WebSocket("wss://shareq.herokuapp.com/ws/queue/");
 
 function App(props) {
   var _useState = (0, _react.useState)([]),
@@ -75873,7 +75873,7 @@ function App(props) {
   };
 
   (0, _react.useEffect)(function () {
-    fetch("http://localhost:8000/api/exists/".concat(props.match.params.id, "/")).then(function (response) {
+    fetch("https://shareq.herokuapp.com/api/exists/".concat(props.match.params.id, "/")).then(function (response) {
       console.log(response.status);
 
       if (response.status !== 200) {
@@ -75908,7 +75908,7 @@ function App(props) {
     }
   }, []);
   (0, _react.useEffect)(function () {
-    fetch("http://localhost:8000/api/admin/".concat(props.match.params.id, "/"), {
+    fetch("https://shareq.herokuapp.com/api/admin/".concat(props.match.params.id, "/"), {
       credentials: 'include'
     }).then(function (res) {
       return res.text();
@@ -75964,7 +75964,7 @@ function App(props) {
   };
 
   var playNext = function playNext() {
-    fetch("http://localhost:8000/api/next/".concat(props.match.params.id), {
+    fetch("https://shareq.herokuapp.com/api/next/".concat(props.match.params.id), {
       credentials: 'include'
     }).then(function (res) {
       return res.text();
@@ -76083,7 +76083,7 @@ function Home() {
     variant: "subtitle1",
     align: "center",
     gutterBottom: true
-  }, "Don't pass the AUX")), _react.default.createElement(_Grid.default, {
+  }, "Make a Spotify queue. Vote with friends. Enjoy hassle-free group listening!")), _react.default.createElement(_Grid.default, {
     container: true,
     direction: "row",
     spacing: 16,
@@ -76634,7 +76634,7 @@ function Create(props) {
   })), _react.default.createElement(_Grid.default, {
     item: true
   }, _react.default.createElement("a", {
-    href: "https://accounts.spotify.com/authorize/?client_id=3eb8dfeedca3482e81ad40e56173d50b&response_type=code&redirect_uri=http%3A%2F%2F".concat(encode(_index.constants.backendIP), "%2Fapi%2Fcallback%2F&scope=user-modify-playback-state%20user-read-private&state=").concat(queue)
+    href: "http://accounts.spotify.com/authorize/?client_id=70cd90d291d44815bd60a118b76b89ef&response_type=code&redirect_uri=https%3A%2F%2F".concat(encode(_index.constants.backendIP), "%2Fapi%2Fcallback%2F&scope=user-modify-playback-state%20user-read-private&state=").concat(queue)
   }, _react.default.createElement(_Button.default, {
     variant: "contained",
     color: "primary",
@@ -76724,7 +76724,7 @@ function Join(props) {
   };
 
   var handleJoin = function handleJoin() {
-    fetch("http://".concat(_index.constants.backendIP, "/api/exists/").concat(input, "/")).then(function (response) {
+    fetch("https://".concat(_index.constants.backendIP, "/api/exists/").concat(input, "/")).then(function (response) {
       console.log(response.status);
 
       if (response.status === 200) {
@@ -76907,7 +76907,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 //import AppBar from '@material-ui/core/AppBar'
 //import { Typography } from '@material-ui/core';
 var constants = {
-  backendIP: 'localhost:8000' // localhost:8000 or 192.168.1.8:8000
+  backendIP: 'shareq.herokuapp.com' // localhost:8000 or 192.168.1.8:8000
 
 };
 exports.constants = constants;
@@ -76967,7 +76967,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "41999" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "38111" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);

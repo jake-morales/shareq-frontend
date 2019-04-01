@@ -17,7 +17,7 @@ function Home () {
                     Welcome to ShareQ
                 </Typography>
                 <Typography variant='subtitle1' align='center' gutterBottom>
-                    Don't pass the AUX
+                    Make a Spotify queue. Vote with friends. Enjoy hassle-free group listening!
                 </Typography>
             </Grid>
             <Grid container
